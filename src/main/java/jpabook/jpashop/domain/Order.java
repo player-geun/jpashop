@@ -17,8 +17,13 @@ public class Order {
     @Column(name = "ORDER_ID")
     private Long id;
 
-    @Column(name = "MEMBER_ID")
-    private Long memberId;
+//    @Column(name = "MEMBER_ID")
+//    private Long memberId;
+
+    @ManyToOne
+    @JoinColumn(name = "MEMBER_ID")
+    private Member member;
+
     private LocalDateTime orderDate;
 
     //ORDER 사용하면 순서가 꼬여서 나중에 큰 장애 발생가능성
