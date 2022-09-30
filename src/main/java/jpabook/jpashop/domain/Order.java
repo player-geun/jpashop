@@ -24,6 +24,10 @@ public class Order {
     @JoinColumn(name = "MEMBER_ID")
     private Member member;
 
+    @OneToOne
+    @JoinColumn(name = "DELIVERY_ID")
+    private Delivery delivery;
+
     private LocalDateTime orderDate;
 
     //ORDER 사용하면 순서가 꼬여서 나중에 큰 장애 발생가능성

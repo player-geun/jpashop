@@ -11,15 +11,15 @@ public class OrderItem {
 
     @Id
     @GeneratedValue
-    @Column(name = "ORDER_ITEM_ID")
+    @JoinColumn(name = "ORDER_ITEM_ID")
     private Long id;
 
     @ManyToOne
-    @Column(name = "ORDER_ID")
+    @JoinColumn(name = "ORDER_ID")
     private Order order;
 
     @ManyToOne
-    @Column(name = "ITEM_ID")
+    @JoinColumn(name = "ITEM_ID")
     private Item item;
 
     private int orderPrice;
