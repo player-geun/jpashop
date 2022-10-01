@@ -10,7 +10,7 @@ import java.time.LocalDateTime;
 @Getter @Setter
 //DB마다 다르지만, ORDER가 예약어로 걸려있는 곳이 있어서 테이블명으로 ORDERS를 자주 사용
 @Table(name = "ORDERS")
-public class Order {
+public class Order extends BaseEntity{
 
     @Id
     @GeneratedValue
